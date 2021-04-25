@@ -2,10 +2,20 @@
 body 
 {
     background: #F5F6F8 !important;
+    font-family: Roboto;
 }
 a
 {
     color: inherit !important;
+    text-decoration: none !important;
+}
+.bg-theme
+{
+    background-color: #02353C;
+}
+.theme-text
+{
+    color:#02353C
 }
 .jumbotron
 {
@@ -323,171 +333,251 @@ a
     justify-content: center;
     flex-direction: column;
 }
-@media all and (max-width: 480px) {
-    .jumbotron,.jumbotron-cover
-    {
-        height:50vh !important;
-        min-height: 50vh;
-    }
-    .jumbotron-container
-    {
-        padding:0px 20px !important;
-    }
-    .jumbotron-text
-    {
-        font-size: 3em;
-        line-height: 70px !important;
-    }
-    .jumbotron-text span
-    {
-        font-size: 0.4em;
-        margin-top:-20px !important;
-    }
-    .navbar-brand img
-    {
-        max-width: 50px;
-    }
-    .navbar
-    {
-        padding-left: 0px !important;
-    }
-    .apply-btn
-    {
-        position:relative;
-        margin-top:calc(100% - 160px) !important;
-        font-size: 18px;
-        line-height:60px;
-        width:60%;
-    }
-    .courses-left
-    {
-        padding-top:0px;
-    }
-    .section-header
-    {
-        font-size: 32px;
-        border-left-width: 10px ;
-        padding-left: 20px;
-    }
-    .section-header span
-    {
-        display: inline;   
-    }
-    .course-info-ul
-    {
-        margin-left: 30px;
-        margin-right: 20px;
-        margin-top: 0px;
-        width: auto !important;
-    }
-    .view-more-container
-    {
-        display: none !important;
-    }
-    .course-info-p
-    {
-        padding: 20px;
-        font-size: 16px;
-        line-height: 30px;
-    }
-    .pull-left
-    {
-        margin-top: 0px;
-    }
-    .course-info-link
-    {
-        font-size: 18px !important;
-    }
-    .course-info-link::after
-    {
-        transform: rotate(90deg);
-    }
-    .princi-message
-    {
-        margin-top: 40px;
-        margin-left: 00px;
-    }
-    .section-header-2
-    {
-        font-size: 70px;
-    }
-    .about-desc
-    {
-        padding:20px 0px;
-    }
-    .about-desc h1 , .about-desc p 
-    {
-        padding: 0px 0px;
-    }
-    .princi-img
-    {
-        margin-left: 0px;
-    }
-    .about-img-container .about-img
-    {
-       margin-top: 30px !important;
-    }
-    .about-img-container .about-img:nth-child(3)
-    {
-        margin-left: 0px;
-    }
-    .footer-nav a
-    {
-        font-size: 14px !important;
-        padding:0px 10px;
-    }
-    .footer-nav a:nth-child(1)
-    {
-        display: block !important;
-    }
-    .footer-nav
-    {
-        padding-left: 0px !important;
-    }
-    .about-img-container .about-img:nth-child(2)
-    {
-        margin-left:0px
-    }
-    .know-more-ul
-    {
-        width: 100% !important;
-        padding-right: 40px;
-        padding-left: 0px;
-        margin-left: 0px;
-    }
-    .know-more-ul .course-info-link::after
-    {
-        transform: rotate(0deg) !important;
-    }
-    .know-more-container
-    {
-        display: flex;
-        align-items: start;
-        justify-content: center;
-        flex-direction: column;
-    }
-    .about-college-item-container
-    {
-        margin-top:20px
-    }
+.jumbotron-small 
+{
+    height:50vh !important;
+    background-size: cover;
+    background-position:center;
+}
+.jumbotron-cover-small
+{
+    height:50vh;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 37.29%, rgba(0, 0, 0, 0.216) 81.56%);
+}
+.sub-nav
+{
+    background-color: #fff;
+    list-style: none;
+    padding-left: 0px;
+    display: flex;
+    margin-top:-25px;
+    box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
+    transition: all 10s;
+    z-index:1;
+}
+.sub-nav-link
+{
+    font-family: Roboto;
+    padding:0px 15px;
+    line-height:10px;
+    font-weight:bold;
+    display: block;
+    position: relative;
+}
+.sub-nav-link a
+{
+    height:100%;
+    line-height:50px;
+}
+.sub-nav-link:after{
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	content: '';
+	background-color: #02353C;
+	opacity: 0;
+    transition: all 200ms linear;
+}
+.sub-nav-link:hover:after{
+	bottom: 0;
+	opacity: 1;
+}
+.sub-nav .sub-nav-link:first-child
+{
+    background-color: #02353C;
+    color:#fff;
+}
+.sub-page-p
+{
+    padding:40px 0px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.sub-page-p p
+{
+    margin-left:30px;
+    padding-right:40px;
+    margin-top:-40px;
+}
+.sub-page-p li
+{
+    margin:20px 0px !important;
+}
+.sub-page-heading
+{
+    font-family: Roboto;
+    font-weight:bold;
+    opacity: 0.1;
+    font-size: 80px;
+    
+}
+.scrolled-up-sub-nav
+{
+    position:fixed;
+    top:99px;
+    width:100%;
+    border-top:2px solid #02353C;
+    transition: width 1s ease-in-out;
+}
+.themed-table
+{
+    width:100%
+}
+.themed-table  tr th
+{
+    border:2px solid #02353C;
+    text-align: center;
+    font-family: Roboto;
+    font-weight:bold;
+    background-color: #02353C;
+    color: #fff;
+    padding: 10px;
+}
+.themed-table  tr td
+{
+    border-bottom:1px dashed #02353C;
+    text-align: center;
+    font-family: Roboto;
+    font-weight:bold;
+    padding: 10px;
+}
+.themed-table  tr td:first-child
+{
+    background-color: #d8e6e6;
+}
+
+.themed-table img.download-icon
+{
+    max-height: 30px;
+}
+
+.themed-table .download-icon::after
+{
+    content:'Download Now';
+    display: inline-block;
+
 }
 
 
+.card-container {
+    padding: 100px 0px;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+}
 
 
+.profile-card-2 {
+    max-width: 300px;
+    height:350px;
+    background-color: #FFF;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+    margin: 10px auto;
+    cursor: pointer;
+    border-radius: 10px;
+}
 
+.profile-card-2 img {
+    height:100%;
+    transition: all linear 0.25s;
+}
 
+.profile-card-2 .profile-name {
+    position: absolute;
+    left: 30px;
+    bottom: 70px;
+    font-size: 30px;
+    color: #FFF;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    transition: all linear 0.25s;
+}
 
+.profile-card-2 .profile-icons {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    color: #FFF;
+    transition: all linear 0.25s;
+}
 
+.profile-card-2 .profile-username {
+    position: absolute;
+    bottom: 50px;
+    left: 30px;
+    color: #FFF;
+    font-size: 13px;
+    transition: all linear 0.25s;
+}
 
+.profile-card-2 .profile-icons .fa {
+    margin: 5px;
+}
 
+.profile-card-2:hover img {
+    filter: grayscale(100%);
+}
 
+.profile-card-2:hover .profile-name {
+    bottom: 80px;
+}
 
+.profile-card-2:hover .profile-username {
+    bottom: 60px;
+}
 
-
-
-
-
+.profile-card-2:hover .profile-icons {
+    right: 40px;
+}
+.notice-table h2
+{
+    font-family: Roboto !important;
+    font-weight:bold;
+    font-size:20px
+}
+.notice-table p
+{
+   font-weight:normal;
+   opacity:0.5;
+}
+.footer-ul
+{
+    list-style: none !important;
+}
+.footer-ul li:first-child
+{
+    font-family: Roboto !important;
+    font-weight:bold;
+    font-size: 40px;
+    opacity: 0.5;
+    margin:10px 0px;
+}
+.footer-ul li:not(:first-child)
+{
+    
+    margin:10px 0px;
+    margin-left: 20px;
+}
+.footer-ul li:not(:first-child)::before
+{
+    content: '- ';
+    display: inline-block;
+    padding-right: 10px;
+   
+}
+footer
+{
+    background-size: cover;
+    background-position: center;
+}
+.footer-cover
+{
+    background-color: rgba(2, 53, 60,0.7)
+}
 .start-header {
 	opacity: 1;
 	transform: translateY(0);
@@ -817,4 +907,185 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	display: block;
   filter: brightness(10%);
 	transition: all 250ms linear;
+}
+@media all and (max-width: 480px) {
+    .jumbotron,.jumbotron-cover
+    {
+        height:50vh !important;
+        min-height: 50vh;
+    }
+    .jumbotron-container
+    {
+        padding:0px 20px !important;
+    }
+    .jumbotron-text
+    {
+        font-size: 3em;
+        line-height: 70px !important;
+    }
+    .jumbotron-text span
+    {
+        font-size: 0.4em;
+        margin-top:-20px !important;
+    }
+    .navbar-brand img
+    {
+        max-width: 50px;
+    }
+    .navbar
+    {
+        padding-left: 0px !important;
+    }
+    .apply-btn
+    {
+        position:relative;
+        margin-top:calc(100% - 160px) !important;
+        font-size: 18px;
+        line-height:60px;
+        width:60%;
+    }
+    .courses-left
+    {
+        padding-top:0px;
+    }
+    .section-header
+    {
+        font-size: 32px;
+        border-left-width: 10px ;
+        padding-left: 20px;
+    }
+    .section-header span
+    {
+        display: inline;   
+    }
+    .course-info-ul
+    {
+        margin-left: 30px;
+        margin-right: 20px;
+        margin-top: 0px;
+        width: auto !important;
+    }
+    .view-more-container
+    {
+        display: none !important;
+    }
+    .course-info-p
+    {
+        padding: 20px;
+        font-size: 16px;
+        line-height: 30px;
+    }
+    .pull-left
+    {
+        margin-top: 0px;
+    }
+    .course-info-link
+    {
+        font-size: 18px !important;
+    }
+    .course-info-link::after
+    {
+        transform: rotate(90deg);
+    }
+    .princi-message
+    {
+        margin-top: 40px;
+        margin-left: 00px;
+    }
+    .section-header-2
+    {
+        font-size: 70px;
+    }
+    .about-desc
+    {
+        padding:20px 0px;
+    }
+    .about-desc h1 , .about-desc p 
+    {
+        padding: 0px 0px;
+    }
+    .princi-img
+    {
+        margin-left: 0px;
+    }
+    .about-img-container .about-img
+    {
+       margin-top: 30px !important;
+    }
+    .about-img-container .about-img:nth-child(3)
+    {
+        margin-left: 0px;
+    }
+    .footer-nav a
+    {
+        font-size: 14px !important;
+        padding:0px 10px;
+    }
+    .footer-nav a:nth-child(1)
+    {
+        display: block !important;
+    }
+    .footer-nav
+    {
+        padding-left: 0px !important;
+    }
+    .about-img-container .about-img:nth-child(2)
+    {
+        margin-left:0px
+    }
+    .know-more-ul
+    {
+        width: 100% !important;
+        padding-right: 40px;
+        padding-left: 0px;
+        margin-left: 0px;
+    }
+    .know-more-ul .course-info-link::after
+    {
+        transform: rotate(0deg) !important;
+    }
+    .know-more-container
+    {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .about-college-item-container
+    {
+        margin-top:20px
+    }
+    .jumbotron-small, .jumbotron-cover-small
+    {
+        height:20vh !important
+    }
+    .sub-nav-link
+    {
+       width:100%;
+    }
+    .scrolled-up-sub-nav
+    {
+        position:relative !important;
+        top:0px !important;
+    }
+    .navigation-wrap
+    {
+        background-color:#fff;
+    }
+    .start-header .nav-link , .start-header .nav-item:hover .nav-link
+    {
+        color:#000 !important
+    }
+    table
+    {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        width:100% !important;
+    }
+
+    table tbody {
+        display: table;
+        width: 100%;
+    }
 }

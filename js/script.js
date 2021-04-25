@@ -12,11 +12,21 @@
 			}
 		});
 	});		
+
+	$(function() {
+		var header = $(".sub-nav");
+		$(window).scroll(function() {    
+			var scroll = $(window).scrollTop();
 		
-	//Animation
-	$(document).ready(function() {
-		$('body.hero-anime').removeClass('hero-anime');
-	});
+			if (scroll >= 250) {
+				header.addClass("scrolled-up-sub-nav");
+			} else {
+				header.removeClass("scrolled-up-sub-nav")
+			}
+		});
+	});		
+		
+
 
 	//Menu On Hover
 		
